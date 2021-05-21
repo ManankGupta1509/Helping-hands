@@ -1,0 +1,34 @@
+<!Doctype html>
+
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:replace="layout :: site-head">
+    <title>User Update</title>
+</head>
+
+<header th:replace="layout :: logged-out"></header>
+
+<h1 align="center" style=" color: blue">Update The Current Info:</h1>
+<hr style="background-color: green; border:1px solid green; width: 30%;">
+<form th:method="put"  th:action="@{/edit(postId=${datalist.id})}" align="center">
+    <table align="center" border="0px">
+        <tr><td><label for="fullname"><h2>Menu Item:</h2></label></td>
+        <td><input type="text" id="fullname" name="fullName" required th:value="${datalist.fullName}" style="border:0px;border-bottom: 2px solid black;border-radius:2px;background-color: white; font-size: 16px; padding: 5px; "/></td></tr>
+    <tr> <td><label for="mobileNumber"><h2>Price:</h2></label></td>
+        <td>$<input type="text" id="mobileNumber" th:value="${datalist.mobileNumber}" required name="mobileNumber" style="border:0px;border-bottom: 2px solid black;border-radius:2px;background-color: white; font-size: 16px; padding: 5px; " /></td></tr>
+   <tr>
+
+    </table>
+    <input type="submit" value="Update" onclick="check()" style="background-color: green;border: 0px;border-radius: 5px;padding: 20px;font-size: 16px; color: aliceblue"/>
+</form>
+<script>
+    function check() {
+        var name = document.getElementById("fullname").value;
+        var mn = document.getElementById("mobileNumber").value;
+
+        if (name == "" || mn == "") {
+            alert("Please Enter The Valid Details");
+        }
+    }
+</script>
+</html>

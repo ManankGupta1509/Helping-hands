@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Restraunt-Menu</title>
+</head>
+<body>
+<header th:replace="layout :: logged-out"></header>
+<div id="parent">
+    <h2 id="heading" align="center" >All User Data</h2>
+    <form th:action="@{/search}" align="center">
+        <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required style="border: 0px; border-bottom: 2px solid black;border-radius: 5px;padding: 10px;font-size: 16px; color: black " />
+        &nbsp;
+        <input type="submit" value="Search" style="background-color: blue;border: 0px;border-radius: 5px;padding: 10px;font-size: 16px; color: white " />
+        &nbsp;
+        <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" style="background-color: red;border: 0px;border-radius: 5px;padding: 10px;font-size: 16px; color: black " />
+    </form>
+    <hr>
+<div id="result_div">
+    <table id="result_table" align="center" style="background-color: cornflowerblue; padding: 15px; font-size: 22px" >
+        <tr>
+            <td style="padding: 10px;">Dish:</td>
+            <td>$</td>
+            <td style="padding: 10px;">Price</td>
+        </tr>
+            <main id="datalist" >
+                <dataList th:each="p : ${datalist}" th:method="get" th:action="@{/index}">
+                    <tr>
+                    <td style="padding: 10px;"><p th:text="${p.fullName}"></p></td>
+                        <td>$</td>
+                        <td style="padding: 10px;"><p th:text="${p.mobileNumber}">$</p></td>
+                    <td style="padding: 10px;"><form th:action="@{/delete(postId=${p.id})}" th:method="delete">
+                        <input type="submit" value="DELETE" style="background-color: orange;border: 0px;border-radius: 5px;padding: 20px;font-size: 16px; color: black "/>
+                    </form></td>
+                        <td style="padding: 10px;">
+                            <a href = "edit.html" th:href="@{/edit(postId=${p.id})}" th:methods="put"><input type="submit" value="EDIT" style="background-color: green;border: 0px;border-radius: 5px;padding: 20px;font-size: 16px; color: black "/>
+                            </a></td>
+                    </tr>
+        </dataList>
+            </main>
+    </table>
+</div>
+</div>
+<script type="text/javascript">
+    function clearSearch() {
+        window.location = "[[@{/index}]]";
+    }
+</script>
+</body>
+</html>
