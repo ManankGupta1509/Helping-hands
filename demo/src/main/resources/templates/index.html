@@ -6,7 +6,7 @@
 <body>
 <header th:replace="layout :: logged-out"></header>
 <div id="parent">
-    <h2 id="heading" align="center" >All User Data</h2>
+    <h2 id="heading" align="center" >Current Menu  <i class="fa fa-book"></i></h2>
     <form th:action="@{/search}" align="center">
         <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required style="border: 0px; border-bottom: 2px solid black;border-radius: 5px;padding: 10px;font-size: 16px; color: black " />
         &nbsp;
