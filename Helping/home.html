@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<title>Helping Hands</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="abc.css"> -->
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+.w3-top,h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">HH</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#home" class="w3-bar-item w3-button" id="logout" onclick="show()">Logout</a>
+        <a href="#login" class="w3-bar-item w3-button" id="loginbtn">Login</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Demo</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<!-- <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="forestbridge.jpg" alt="Helping Hands" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge" style="color: white;">Helping Hands</h1>
+  </div>
+</header> -->
+
+
+<!-- Header -->
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white" id="home">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      HH
+    </div>
+    <div class="w3-display-middle">
+      <h1 class="w3-jumbo w3-animate-top">HELPING HANDS</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center">Come Online With Us</p>
+    </div>
+    <div class="w3-display-bottomleft w3-padding-large">
+        
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="help">
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="about.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+<br>
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Us</h1><br>
+      <h5 class="w3-center">Come Online With Us!</h5><br>
+      <p class="w3-large">This App will enable you to put your individual restaurant according to your customized menu on the internet in this phase of pandemic and for the future. <br>This application ensures online interaction between restaurant and customer will become more easy and small restaurant can have their foothold in this online arena. We have create an exchange environment so that nobody has to face loss at the end this app will help restaurant have their own website with customised dining takeaway and delivery options that you will be able to establish yourself on online front and can overcome these <span class="w3-tag w3-light-grey">pandemic</span> losses.</p><br>
+      <p class="w3-large w3-text-grey w3-hide-medium">It is a simple adding menu items, tables, etc. in this app you will just have to write menu-items and click add. The customers can easily access the menus and order.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <!-- <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Our Menu</h1><br>
+      <h4>Bread Basket</h4>
+      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+      <h4>Honey Almond Granola with Fruits</h4>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h4>Belgian Waffle</h4>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h4>Scrambled eggs</h4>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+      <h4>Blueberry Pancakes</h4>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+    </div>
+  </div> -->
+
+  <!--Login Section -->
+  <div class="w3-row w3-padding-64" id="login">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <br><br>
+      <h1 class="w3-center">Login</h1><br>
+      <h5 class="w3-center">Don't Have an Account? <a href="#signup" title="Sign Up" class="w3-hover-text-green" onclick="showsignup()">Sign Up</a></h5><br><br>
+      <form action="get" onsubmit="return false">
+        <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" name="Email"required></p><br>
+        <p><input class="w3-input w3-padding-16" type="password" placeholder="Password" name="Password"required></p><br>
+        <p><button class="w3-button w3-light-grey w3-section" type="submit" onsubmit="close()">LOGIN</button></p>
+      </form>
+    </div>
+    <div class="w3-col m6 w3-padding-large">
+      <img src="login.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Sign up Section -->
+  <div class="w3-row w3-padding-64" id="signup">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="signup.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+<br>
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Sign Up</h1><br>
+      <h5 class="w3-center">Already Have an Account? <a href="#login" title="Login" class="w3-hover-text-green" onclick="showlogin()">Login</a></h5><br>
+      <form action="get" onsubmit="return false">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" name="Email"required></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="Mobile Number" name="mobile"required></p>
+      <p><input class="w3-input w3-padding-16" type="password" placeholder="Password" name="Password"required></p><br>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit" onclick="close()">SIGN UP</button></p>
+    </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contact Us!</h1><br>
+    <!-- <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p> -->
+    <h3><p class="w3-text-blue-grey w3-large"><b>Give Feedback If Any</b></p></h3>
+    <p>You can also contact us by phone 00553123-2323 or email helpinghands@gmail.com, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Remarks" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+</div>
+<!-- End Content -->
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Copyright @<a href="#home" title="Helping Hands" class="w3-hover-text-green">Helping Hands</a> 2021</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
