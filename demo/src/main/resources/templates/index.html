@@ -15,6 +15,7 @@
         <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" style="background-color: red;border: 0px;border-radius: 5px;padding: 10px;font-size: 16px; color: black " />
     </form>
     <hr>
+    <button onclick="test()">test</button>
 <div id="result_div">
     <table id="result_table" align="center" style="background-color: cornflowerblue; padding: 15px; font-size: 22px" >
         <tr>
@@ -43,6 +44,18 @@
 <script type="text/javascript">
     function clearSearch() {
         window.location = "[[@{/index}]]";
+    }
+    function test(){
+        alert("opening the function");
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "http://localhost:8080/creates");
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("opening the page");
+                window.open(this.responseText);
+            }
+        };
+        xhttp.send();
     }
 </script>
 </body>

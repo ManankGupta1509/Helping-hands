@@ -40,7 +40,7 @@ public class dataListControler {
 
     @RequestMapping(method = RequestMethod.GET,value = "/creates")
     public String getCreate(){
-        return "create";
+        return "create.html";
     }
     @RequestMapping(method = RequestMethod.POST,value = "/create")
     public String createNewPost(dataList newPost)
