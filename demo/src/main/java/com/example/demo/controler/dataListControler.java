@@ -1,5 +1,6 @@
 package com.example.demo.controler;
 
+import com.example.demo.model.User;
 import com.example.demo.model.dataList;
 import com.example.demo.services.dataListServices;
 import javassist.compiler.ast.Keyword;
@@ -40,13 +41,22 @@ public class dataListControler {
 
     @RequestMapping(method = RequestMethod.GET,value = "/creates")
     public String getCreate(){
-        return "create.html";
+        return "create.html ";
     }
     @RequestMapping(method = RequestMethod.POST,value = "/create")
-    public String createNewPost(dataList newPost)
+    public String createNewPost(dataList newPost,HttpSession session)
     {
+        User user = (User)session.getAttribute("LoggedUser");
+        newPost.setUser(user);
         datalistservices.createPost(newPost);
-        return "redirect:/index";
+        return "redirect:/create";
+    }
+    @RequestMapping(method = RequestMethod.GET,value = "/create")
+    public ArrayList<dataList> getdata(Model model, HttpSession session){
+        User user = (User)session.getAttribute("LoggedUser");
+        ArrayList<dataList> data=datalistservices.getdata(user.getId());
+        model.addAttribute("datalist",data);
+        return data;
     }
     @RequestMapping(method = RequestMethod.DELETE,value = "/delete")
     public String deletePost(@RequestParam(name = "postId") Integer postId){

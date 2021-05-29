@@ -4,7 +4,7 @@
     <title>Restraunt-Menu</title>
 </head>
 <body>
-<header th:replace="layout :: logged-out"></header>
+<header th:replace="layout2 :: logged-in"></header>
 <div id="parent">
     <h2 id="heading" align="center" >Current Menu  <i class="fa fa-book"></i></h2>
     <form th:action="@{/search}" align="center">
@@ -15,7 +15,6 @@
         <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" style="background-color: red;border: 0px;border-radius: 5px;padding: 10px;font-size: 16px; color: black " />
     </form>
     <hr>
-    <button onclick="test()">test</button>
 <div id="result_div">
     <table id="result_table" align="center" style="background-color: cornflowerblue; padding: 15px; font-size: 22px" >
         <tr>
@@ -26,7 +25,7 @@
             <main id="datalist" >
                 <dataList th:each="p : ${datalist}" th:method="get" th:action="@{/index}">
                     <tr>
-                    <td style="padding: 10px;"><p th:text="${p.fullName}"></p></td>
+                    <td style="padding: 10px;"><p th:text="${p.name}"></p></td>
                         <td>$</td>
                         <td style="padding: 10px;"><p th:text="${p.mobileNumber}">$</p></td>
                     <td style="padding: 10px;"><form th:action="@{/delete(postId=${p.id})}" th:method="delete">
@@ -44,18 +43,6 @@
 <script type="text/javascript">
     function clearSearch() {
         window.location = "[[@{/index}]]";
-    }
-    function test(){
-        alert("opening the function");
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "http://localhost:8080/creates");
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                alert("opening the page");
-                window.open(this.responseText);
-            }
-        };
-        xhttp.send();
     }
 </script>
 </body>

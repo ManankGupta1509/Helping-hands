@@ -17,7 +17,9 @@ public class dataListServices {
     public ArrayList<dataList> getdata() {
         return dataListrepository.getData();
     }
-
+    public ArrayList<dataList> getdata(Integer id) {
+        return dataListrepository.getData(id);
+    }
     public void createPost(dataList newPost) {
         dataListrepository.createPost(newPost);
     }

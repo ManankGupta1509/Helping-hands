@@ -8,29 +8,64 @@ import javax.persistence.*;
 public class dataList {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "fullName")
-    private String fullName;
+
+    @Column(name = "name")
+    private String name;
+    @Column(name = "mail")
+    private String mail;
     @Column(name = "mobileNumber")
     private String mobileNumber;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User user;
 
-    public Integer getId() {
-        return id;
+    public dataList(String name, String mail, String mobileNumber) {
+        this.name = name;
+        this.mail = mail;
+        this.mobileNumber = mobileNumber;
+    }
+
+    public dataList() {
+
     }
 
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public User getUser() {
+        return user;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     public String getMobileNumber() {
@@ -40,7 +75,4 @@ public class dataList {
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
-
-
-
 }

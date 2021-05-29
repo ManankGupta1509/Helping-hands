@@ -21,7 +21,13 @@ public class dataListRepository {
         System.out.println(result);
         return result;
     }
-
+    public ArrayList<dataList> getData(Integer userId) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        TypedQuery<dataList> query=entityManager.createQuery("SELECT d from dataList d JOIN FETCH d.user duser WHERE duser.id = :userId",dataList.class);
+        query.setParameter("userId",userId);
+        ArrayList<dataList> result = (ArrayList<dataList>)query.getResultList();
+        return result;
+    }
     public void createPost(dataList newPost) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction= entityManager.getTransaction();

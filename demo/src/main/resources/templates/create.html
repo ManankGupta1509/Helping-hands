@@ -6,23 +6,51 @@
     <title>User Registration</title>
 </head>
 
-<header th:replace="layout :: logged-out"></header>
+<header th:replace="layout2 :: logged-in"></header>
 
 <h1 align="center" style=" color: blue">Add Menu items:</h1>
 <hr style="background-color: green; border:1px solid green; width: 30%;">
-<form method="post" th:object="${dataList}" th:action="@{/create}" align="center">
-    <table align="center" border="0px">
-        <tr><td><label for="fullname"><h2>Menu-Item:</h2></label></td>
-        <td><input type="text" id="fullname" name="fullName" required style="border:0px;border-bottom: 2px solid black;border-radius:2px;background-color: white; font-size: 16px; padding: 5px; "/></td></tr>
-    <tr> <td><label for="mobileNumber"><h2>Price:</h2></label></td>
-        <td>$<input type="text" id="mobileNumber" name="mobileNumber" required  style="border:0px;border-bottom: 2px solid black;border-radius:2px;background-color: white; font-size: 16px; padding: 5px; " /></td></tr>
-   <tr>
+<form method="post" th:object="${dataList}" th:action="@{/create}">
+    <table align="center" style="background-color: burlywood; padding: 70px; border-radius: 5px">
+        <tr>
+            <td><label for="Name"><h3>Dish: </h3></label></td>
+            <td><input type="text" id="Name" name="name" minlength="3" style="border:0px;border-bottom: 2px solid black;border-radius:2px;background-color: white; font-size: 16px; padding: 5px; "></td>
+        </tr>
+        <tr>
+            <td> <label for="mob_no"><h3>Price: </h3></label></td>
+            <td><input type="text" id="mob_no" name="mobileNumber" style="border:0px;border-bottom: 2px solid black;border-radius:2px;background-color: white; font-size: 16px; padding: 5px; "></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"> <input type="submit" th:onclick="@{/create}" value="Add-Item" onclick="check()"  th:method="post" style="background-color: green;border: 0px;border-radius: 5px;padding: 20px;font-size: 16px; color: aliceblue"></td>
+        </tr>
+    </table></form>
+</div>
+<hr>
+<div id="result_div">
+    <table id="result_table" align="center" style="background-color: cornflowerblue; padding: 15px; font-size: 22px" >
+        <tr>
+            <td style="padding: 10px;">Dish:</td>
+            <td>$</td>
+            <td style="padding: 10px;">Price</td>
+        </tr>
+        <main id="datalist" >
+            <dataList th:each="p : ${datalist}" th:method="get">
+                <tr>
+                    <td style="padding: 10px;"><p th:text="${p.name}"></p></td>
+                    <td style="padding: 10px;"><p th:text="${p.mobileNumber}">$</p></td>
+                    <td style="padding: 10px;"><form th:action="@{/delete(postId=${p.id})}" th:method="delete">
+                        <input type="submit" value="DELETE" style="background-color: orange;border: 0px;border-radius: 5px;padding: 20px;font-size: 16px; color: black "/>
+                    </form></td>
+                </tr>
+            </dataList>
+        </main>
     </table>
-    <input type="submit" value="Add-Item" onclick="check()" style="background-color: green;border: 0px;border-radius: 5px;padding: 20px;font-size: 16px; color: aliceblue"/>
-</form>
+</div>
+</div>
+
 <script>
     function check() {
-        var name = document.getElementById("fullname").value;
+        var name = document.getElementById("Name").value;
         var mn = document.getElementById("mobileNumber").value;
 
 
@@ -31,5 +59,5 @@
         }
     }
 </script>
-
+</body>
 </html>

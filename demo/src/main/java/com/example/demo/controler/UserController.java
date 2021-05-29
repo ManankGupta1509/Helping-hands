@@ -42,7 +42,7 @@ public class UserController {
             //Maintain the session
             session.setAttribute("LoggedUser" , existingUser);
             System.out.println("User Found");
-            return "redirect:/index";
+            return "redirect:/creates";
         } else {
             System.out.println("User Does Not Exist");
             return "users/login";
