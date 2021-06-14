@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title>Helping Hands - Sign Up</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="abc.css"> -->
+<link rel="stylesheet" href="../styles/index.css">
+<link rel="stylesheet" href="../styles/style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+.hh-top,h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="bgimg hh-display-container hh-animate-opacity hh-text-white" id="home">
+    <div class="hh-display-topleft hh-padding-large hh-xlarge">
+      <a href="../home.html" class="hh-bar-item hh-button"><h6>HH</h6></a>
+    </div>
+    <div class="hh-display-middle">
+      <h1 class="hh-jumbo hh-animate-top">HELPING HANDS</h1>
+      <hr class="hh-border-grey" style="margin:auto;width:40%">
+      <p class="hh-large hh-center">Come Online With Us</p>
+    </div>
+    <div class="hh-display-bottomleft hh-padding-large">
+        
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="help">
+
+<!-- Page content -->
+<div class="hh-content" style="max-width:1100px">
+
+  
+
+  <!-- Sign up Section -->
+  <div class="hh-row hh-padding-64" id="signup">
+    <div class="hh-col m6 hh-padding-large hh-hide-small">
+     <img src="../images/signup.jpg" class="hh-round hh-image hh-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+<br>
+    <div class="hh-col m6 hh-padding-large">
+      <h1 class="hh-center">Sign Up</h1><br>
+      <h5 class="hh-center">Already Have an Account? <a href="./login.html" title="Login" class="hh-hover-text-green">Login</a></h5>
+      <h5 class="hh-center">If you are Admin then <a href="./signupadmin.html" title="Sign Up" class="hh-hover-text-green">Sign Up</a> here</h5><br>
+      <form  action="Post" traget="_blank" id="s_form">
+          <p><input class="hh-input hh-padding-16" type="text" placeholder="Userid" required name="userid" id="s_uid"></p>
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Name" required name="Name" id="s_uname"></p>
+      <p><input class="hh-input hh-padding-16" type="email" placeholder="Email" name="Email"required id="s_email"></p>
+      <p><input class="hh-input hh-padding-16" type="number" placeholder="Mobile Number" name="mobile"required id="s_mb"></p>
+      <p><input class="hh-input hh-padding-16" type="password" placeholder="Password" name="Password"required id="s_pass"></p><br>
+      <p><button class="hh-button hh-light-grey hh-section" type="submit" onclick="close()">SIGN UP</button></p>
+    </form>
+    </div>
+  </div>
+
+  <hr>
+
+
+  
+<!-- End page content -->
+</div>
+
+</div>
+<!-- End Content -->
+
+<!-- Footer -->
+<footer class="hh-center hh-light-grey hh-padding-32">
+  <p>Copyright @<a href="#home" title="Helping Hands" class="hh-hover-text-green">Helping Hands</a> 2021</p>
+</footer>
+<script src="../scripts/signup.js"></script>
+</body>
+</html>

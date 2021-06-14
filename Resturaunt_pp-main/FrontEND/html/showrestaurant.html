@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>Helping Hands</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="abc.css"> -->
+<link rel="stylesheet" href="../styles/index.css">
+<link rel="stylesheet" href="../styles/style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+.hh-top,h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+}
+</style>
+<body onload="getallrest()">
+
+<!-- Navbar (sit on top) -->
+<div class="hh-top">
+  <div class="hh-bar hh-white hh-padding hh-card" style="letter-spacing:4px;">
+    <a href="#home" class="hh-bar-item hh-button">HH</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="hh-right hh-hide-small">
+      <!-- <a href="#home" class="hh-bar-item hh-button" id="logout" onclick="show()">Logout</a> -->
+        <a href="../home.html" class="hh-bar-item hh-button" id="loginbtn">Logout</a>
+      <a href="#about" class="hh-bar-item hh-button">About</a>
+      <a href="#showrestro" class="hh-bar-item hh-button">Restaurants</a>
+      <a href="#contact" class="hh-bar-item hh-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Header -->
+<div class="bgimg hh-display-container hh-animate-opacity hh-text-white" id="home">
+    <div class="hh-display-topleft hh-padding-large hh-xlarge">
+      HH
+    </div>
+    <div class="hh-display-middle">
+      <h1 class="hh-jumbo hh-animate-top">HELPING HANDS</h1>
+      <hr class="hh-border-grey" style="margin:auto;width:40%">
+      <p class="hh-large hh-center">Come Online With Us</p>
+    </div>
+    <div class="hh-display-bottomleft hh-padding-large">
+        
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="help">
+
+<!-- Page content -->
+<div class="hh-content" style="max-width:1100px">
+
+  <!-- Show Restaurant Section -->
+
+  <div class="hh-container hh-padding-32" id="showrestro">
+    <h1>Restaurants</h1><br>
+     <table id="ta">
+
+     </table>
+  </div>
+
+
+  <hr>
+  
+<!-- End page content -->
+</div>
+
+</div>
+<!-- End Content -->
+
+<!-- Footer -->
+<footer class="hh-center hh-light-grey hh-padding-32">
+  <p>Copyright @<a href="#home" title="Helping Hands" class="hh-hover-text-green">Helping Hands</a> 2021</p>
+</footer>
+<script src="../scripts/showrestraunt.js"></script>
+</body>
+</html>

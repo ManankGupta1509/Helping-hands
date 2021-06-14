@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<title>Helping Hands</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="abc.css"> -->
+<link rel="stylesheet" href="./styles/index.css">
+<link rel="stylesheet" href="./styles/style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+.hh-top,h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="hh-top">
+  <div class="hh-bar hh-white hh-padding hh-card" style="letter-spacing:4px;">
+    <a href="#home" class="hh-bar-item hh-button">HH</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="hh-right hh-hide-small">
+      <!-- <a href="#home" class="hh-bar-item hh-button" id="logout" onclick="show()">Logout</a> -->
+        <a href="../html/addrestaurant.html" class="hh-bar-item hh-button" id="loginbtn">Add-Restraunt</a>
+      <a href="#about" class="hh-bar-item hh-button">About</a>
+      <a href="#contact" class="hh-bar-item hh-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Header -->
+<div class="bgimg hh-display-container hh-animate-opacity hh-text-white" id="home">
+    <div class="hh-display-topleft hh-padding-large hh-xlarge">
+      HH
+    </div>
+    <div class="hh-display-middle">
+      <h1 class="hh-jumbo hh-animate-top">HELPING HANDS</h1>
+      <hr class="hh-border-grey" style="margin:auto;width:40%">
+      <p class="hh-large hh-center">Come Online With Us</p>
+    </div>
+    <div class="hh-display-bottomleft hh-padding-large">
+        
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="help">
+
+<!-- Page content -->
+<div class="hh-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="hh-row hh-padding-64" id="about">
+    <div class="hh-col m6 hh-padding-large hh-hide-small">
+     <img src="./images/about.jpg" class="hh-round hh-image hh-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+<br>
+    <div class="hh-col m6 hh-padding-large">
+      <h1 class="hh-center">About Us</h1><br>
+      <h5 class="hh-center">Come Online With Us!</h5><br>
+      <p class="hh-large">This App will enable you to put your individual restaurant according to your customized menu on the internet in this phase of pandemic and for the future. <br>This application ensures online interaction between restaurant and customer will become more easy and small restaurant can have their foothold in this online arena. We have create an exchange environment so that nobody has to face loss at the end this app will help restaurant have their own website with customised dining takeaway and delivery options that you will be able to establish yourself on online front and can overcome these <span class="hh-tag hh-light-grey">pandemic</span> losses.</p><br>
+      <p class="hh-large hh-text-grey hh-hide-medium">It is a simple adding menu items, tables, etc. in this app you will just have to write menu-items and click add. The customers can easily access the menus and order.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  
+
+  <!--Login Section -->
+  <!-- <div class="hh-row hh-padding-64" id="login">
+    <div class="hh-col m6 hh-padding-large hh-hide-small">
+      <br><br>
+      <h1 class="hh-center">Login</h1><br>
+      <h5 class="hh-center">Don't Have an Account? <a href="#signup" title="Sign Up" class="hh-hover-text-green" onclick="showsignup()">Sign Up</a></h5><br><br>
+      <form action="get" traget="_blank">
+        <p><input class="hh-input hh-padding-16" type="email" placeholder="Email" name="Email"required></p><br>
+        <p><input class="hh-input hh-padding-16" type="password" placeholder="Password" name="Password"required></p><br>
+        <p><button class="hh-button hh-light-grey hh-section" type="submit" onsubmit="close()">LOGIN</button></p>
+      </form>
+    </div>
+    <div class="hh-col m6 hh-padding-large">
+      <img src="./images/login.jpg" class="hh-round hh-image hh-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+
+  <hr> -->
+
+  <!-- Sign up Section -->
+  <!-- <div class="hh-row hh-padding-64" id="signup">
+    <div class="hh-col m6 hh-padding-large hh-hide-small">
+     <img src="./images/signup.jpg" class="hh-round hh-image hh-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+<br>
+    <div class="hh-col m6 hh-padding-large">
+      <h1 class="hh-center">Sign Up</h1><br>
+      <h5 class="hh-center">Already Have an Account? <a href="#login" title="Login" class="hh-hover-text-green" onclick="showlogin()">Login</a></h5><br>
+      <form  action="get" traget="_blank">
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="hh-input hh-padding-16" type="email" placeholder="Email" name="Email"required></p>
+      <p><input class="hh-input hh-padding-16" type="number" placeholder="Mobile Number" name="mobile"required></p>
+      <p><input class="hh-input hh-padding-16" type="password" placeholder="Password" name="Password"required></p><br>
+      <p><button class="hh-button hh-light-grey hh-section" type="submit" onclick="close()">SIGN UP</button></p>
+    </form>
+    </div>
+  </div>
+
+  <hr> -->
+
+
+  <!-- Demo Section -->
+  <div class="hh-container hh-padding-32" id="demo">
+    <h1>Demo!</h1><br>
+    <!-- <h3 class="hh-border-bottom hh-border-light-grey hh-padding-16">Projects</h3> -->
+  </div>
+
+  <div class="hh-row-padding">
+  <div class="hh-col l3">
+    <div class="hh-container">
+      <div class="hh-display-container">
+        <img src="./images/burger.jfif" style="width:100%">
+        <span class="hh-tag hh-display-topleft"></span>
+        <div class="hh-display-middle hh-display-hover">
+          <a href="./html/login.html"><button class="hh-button hh-black">Login</button></a>
+        </div>
+      </div>
+      <p><b>Restaurant-1</b></p>
+    </div>
+    <div class="hh-container">
+      <div class="hh-display-container">
+        <img src="./images/sandwich.jpg" style="width:100%">
+        <span class="hh-tag hh-display-topleft">New</span>
+        <div class="hh-display-middle hh-display-hover">
+          <a href="./html/login.html"><button class="hh-button hh-black">Login</button></a>
+        </div>
+      </div>
+      <p><b>Restaurant-2</b></p>
+    </div>
+  </div>
+  <div class="hh-col l3">
+    <div class="hh-container">
+      <div class="hh-display-container">
+        <img src="./images/cholebhature.jpg" style="width:100%">
+        <span class="hh-tag hh-display-topleft">New</span>
+        <div class="hh-display-middle hh-display-hover">
+          <a href="./html/login.html"><button class="hh-button hh-black">Login</button></a>
+        </div>
+      </div>
+      <p><b>Restaurant-3</b></p>
+    </div>
+    <div class="hh-container">
+      <div class="hh-display-container">
+        <img src="./images/pavbhaji.jpg" style="width:100%">
+        <span class="hh-tag hh-display-topleft"></span>
+        <div class="hh-display-middle hh-display-hover">
+          <a href="./html/login.html"><button class="hh-button hh-black">Login</button></a>
+        </div>
+      </div>
+      <p><b>Restaurant-4</b></p>
+    </div>
+  </div>
+  <div class="hh-col l3">
+    <div class="hh-container">
+      <div class="hh-display-container">
+        <img src="./images/dessert.jpg" style="width:100%">
+        <span class="hh-tag hh-display-topleft"></span>
+        <div class="hh-display-middle hh-display-hover">
+          <a href="./html/login.html"><button class="hh-button hh-black">Login</button></a>
+        </div>
+      </div>
+      <p><b>Restaurant-5</b></p>
+    </div>
+    <div class="hh-container">
+      <div class="hh-display-container">
+        <img src="./images/juice.jpg" style="width:100%">
+        <span class="hh-tag hh-display-topleft">New</span>
+        <div class="hh-display-middle hh-display-hover">
+          <a href="./html/login.html"><button class="hh-button hh-black">Login</button></a>
+        </div>
+      </div>
+      <p><b>Restaurant-6</b></p>
+    </div>
+  </div></div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="hh-container hh-padding-64" id="contact">
+    <h1>Contact Us!</h1><br>
+    <h3><p class="hh-text-blue-grey hh-large"><b>Give Feedback If Any</b></p></h3>
+    <p>You can also contact us by phone 00553123-2323 or email helpinghands@gmail.com, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="hh-input hh-padding-16" type="email" placeholder="Email" required name="Email"></p>
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Message \ Remarks" required name="Message"></p>
+      <p><button class="hh-button hh-light-grey hh-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+</div>
+<!-- End Content -->
+
+<!-- Footer -->
+<footer class="hh-center hh-light-grey hh-padding-32">
+  <p>Copyright @<a href="#home" title="Helping Hands" class="hh-hover-text-green">Helping Hands</a> 2021</p>
+</footer>
+<script src="./scripts/script.js"></script>
+</body>
+</html>

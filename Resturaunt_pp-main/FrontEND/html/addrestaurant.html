@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title>Helping Hands - Add Restaurant</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="abc.css"> -->
+<link rel="stylesheet" href="../styles/index.css">
+<link rel="stylesheet" href="../styles/style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+.hh-top,h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="bgimg hh-display-container hh-animate-opacity hh-text-white" id="home">
+    <div class="hh-display-topleft hh-padding-large hh-xlarge">
+      <a href="../home.html" class="hh-bar-item hh-button"><h6>HH</h6></a>
+    </div>
+    <div class="hh-display-middle">
+      <h1 class="hh-jumbo hh-animate-top">HELPING HANDS</h1>
+      <hr class="hh-border-grey" style="margin:auto;width:40%">
+      <p class="hh-large hh-center">Come Online With Us</p>
+    </div>
+    <div class="hh-display-bottomleft hh-padding-large">
+        
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="help">
+
+<!-- Page content -->
+<div class="hh-content" style="max-width:1100px">
+
+  
+
+  <!--Adding Restaurant Section -->
+  <div class="hh-container hh-padding-64" id="addrestro">
+    <h1>Add yourself!</h1><br>
+    <h3><p class="hh-text-blue-grey hh-large"><b>Enter Your details!</b></p></h3>
+    <!-- <p>You can also contact us by phone 00553123-2323 or email helpinghands@gmail.com, or you can send us a message here:</p> -->
+      <form  action="Post" traget="_blank" id="add_rest">
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Name of Restaurant" required name="Nameofrestro" id="r_name"></p>
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Tag-Line" required name="tagline" id="r_tl"></p>
+      <p><input class="hh-input hh-padding-16" type="email" placeholder="Email" required name="Email" id="r_email"></p>
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Address" required name="Address" id="r_address"></p>
+      <p><input class="hh-input hh-padding-16" type="number" placeholder="Mobile Number" required name="Mobnum" id="r_mb"></p>
+      <p><input class="hh-input hh-padding-16" type="text" placeholder="Food-License" required name="license" id="r_fl"></p>
+      <p><button class="hh-button hh-light-grey hh-section" type="submit">Add</button></p>
+    </form>
+  </div>
+
+  <hr>
+
+
+  
+<!-- End page content -->
+</div>
+
+</div>
+<!-- End Content -->
+
+<!-- Footer -->
+<footer class="hh-center hh-light-grey hh-padding-32">
+  <p>Copyright @<a href="#home" title="Helping Hands" class="hh-hover-text-green">Helping Hands</a> 2021</p>
+</footer>
+<script src="../scripts/addrestro.js"></script>
+</body>
+</html>
