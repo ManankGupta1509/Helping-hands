@@ -19,7 +19,7 @@ function  loginu(event)
             }
             else {
                 sessionStorage.setItem("id",this.responseText);
-                window.location="../home1.html"
+                window.location="./home1.html"
             }
         }
     }

@@ -1,0 +1,13 @@
+.tst{
+    padding: 25px;
+    border :1px;
+}
+.tsk:hover{
+    padding:30px;
+    background-color: #3a3a3a;
+    color: white;
+}
+.tas:hover{
+    background-color: blue;
+    color: white;
+}

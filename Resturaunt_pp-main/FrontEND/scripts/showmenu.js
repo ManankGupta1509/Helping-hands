@@ -53,14 +53,16 @@ function addingrest(data)
     let  r_heading=document.createElement("h3");
     let text=document.createTextNode(data.iteamName);
     r_heading.appendChild(text);
-    tdr.appendChild(r_heading)
+    tdr.appendChild(r_heading);
+    tdr.setAttribute("class","tst");
     main_div.appendChild(tdr);
 
     tdr=document.createElement("td");
-    r_heading=document.createElement("h5");
+    r_heading=document.createElement("h3");
     text=document.createTextNode(data.price);
     r_heading.appendChild(text);
     tdr.appendChild(r_heading);
+    tdr.setAttribute("class","tst");
     main_div.appendChild(tdr);
 
 
@@ -69,8 +71,13 @@ function addingrest(data)
     text=document.createTextNode("buy");
 
     r_heading.appendChild(text);
-    tdr.appendChild(r_heading)
+    r_heading.setAttribute("onclick","addi");
+    r_heading.setAttribute("class","tsk");
+    tdr.appendChild(r_heading);
+    tdr.setAttribute("class","tst");
     main_div.appendChild(tdr);
-
+    main_div.setAttribute("class","tas");
+    document.getElementById("ta").setAttribute("class","tas");
     return document.getElementById("ta").appendChild(main_div);
+
 }
